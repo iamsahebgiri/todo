@@ -1,0 +1,73 @@
+.input {
+  display: block;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: var(--gray-divider);
+  color: var(--white);
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+}
+
+.input::placeholder {
+  color: var(--white);
+  opacity: 1;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.5rem 2rem;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.btn.primary {
+  background-color: var(--pink-purple);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background-color: var(--pink-purple-light);
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.btn.primary:active {
+  background-color: var(--pink-purple-dark);
+  transition: none 0s;
+}
+
+.btn.secondary {
+  background: none;
+  color: var(--gray-delete);
+}
+
+.btn.secondary:hover {
+  color: var(--pink-purple);
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.error {
+  color: var(--pink-purple);
+}

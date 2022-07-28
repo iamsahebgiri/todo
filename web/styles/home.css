@@ -1,0 +1,84 @@
+.logo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.app {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+ol.grid {
+  padding: 0;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.8rem;
+}
+
+.card {
+  background-color: var(--gray-tiles);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+}
+
+.card--title {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.card--header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-divider);
+  padding: 0.7rem 1.2rem;
+}
+
+.card--footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.card.completed {
+  border: 1px solid var(--green);
+  background-color: var(--gray-completed);
+}
+
+.status {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  position: absolute;
+  right: -1rem;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.text-md {
+  font-size: 0.9rem;
+}
+
+.list-title {
+  padding: 1.8rem 0;
+}
+
+.center-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
