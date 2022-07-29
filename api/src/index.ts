@@ -5,8 +5,25 @@ import cors from "cors";
 const prisma = new PrismaClient();
 const app = express();
 
+const port = process.env.PORT || 4000;
+
 app.use(cors());
 app.use(express.json());
+
+app.get("/", async (req, res) => {
+  res.send(
+    `
+  <h1>Todo REST API v1</h1>
+  <h2>Available Routes</h2>
+  <pre>
+    GET, POST /todos
+    GET, PATCH, DELETE /todos/:id
+
+    POST /signup
+  </pre>
+  `.trim()
+  );
+});
 
 app.get("/todos", async (req, res) => {
   const todos = await prisma.todo.findMany();
@@ -77,7 +94,7 @@ app.post(`/signup`, async (req, res) => {
   res.json(user);
 });
 
-const server = app.listen(4000, () =>
+app.listen(port, () =>
   console.log(`
-🚀 Server ready at: http://localhost:4000`)
+🚀 Server ready at: http://localhost:${port}`)
 );
