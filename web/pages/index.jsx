@@ -14,7 +14,10 @@ const Home = () => {
     fetch(`${API_URL}/todos`)
       .then((response) => response.json())
       .then((todos) => {
-        setTodos(todos);
+        if (todos.length !== 0) {
+          todos = todos.slice(0, 50);
+          setTodos(todos);
+        }
       })
       .finally(() => {
         setIsLoading(false);
@@ -62,7 +65,7 @@ const Home = () => {
   };
 
   const onNewTodoCreation = (todo) => {
-    const newTodos = [...todos, todo];
+    const newTodos = [todo, ...todos];
     setTodos(newTodos);
   };
 
