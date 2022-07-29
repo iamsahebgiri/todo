@@ -26,7 +26,11 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/todos", async (req, res) => {
-  const todos = await prisma.todo.findMany();
+  const todos = await prisma.todo.findMany({
+    orderBy: {
+      updatedAt: "desc",
+    },
+  });
   res.json(todos);
 });
 
