@@ -82,3 +82,16 @@ ol.grid {
   align-items: center;
   justify-content: center;
 }
+
+.list-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select {
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border-right: 0.5rem solid transparent;
+}
